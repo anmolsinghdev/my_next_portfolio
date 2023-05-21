@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import LoadingSpinner from '@/public/assets/svgs/loading-loop.svg';
-import { ClipLoader } from 'react-spinners';
 export default function Loading() {
   // You can add any UI inside Loading, including a Skeleton.
   return (
