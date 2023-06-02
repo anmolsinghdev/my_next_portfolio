@@ -28,7 +28,7 @@ function Work({ position, company, location, type, duration }: IWork) {
             <p className="text-content text-xs md:text-sm">{company}</p>
           </div>
           <div className="flex items-center">
-            <p className="text-content text-xs flex gap-1 md:text-sm pl-1">
+            <p className="text-content text-xs flex gap-1 md:text-sm">
               <IoLocationOutline className="dark:text-whit" size={18} />
               {location}
             </p>
