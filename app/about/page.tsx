@@ -4,7 +4,6 @@ import Work from '@/components/Work/Work';
 import React from 'react';
 
 export default function page() {
-  console.log('called about');
   return (
     <>
       <main className="container mx-auto max-width pt-10 pb-20 ">
