@@ -49,7 +49,7 @@ export default function Navbar({ onThemeToggle }: INavbar) {
           <svg
             className={
               theme.palette.mode === 'dark'
-                ? 'dark:stroke-white fill-light-heading md:hidden'
+                ? 'dark:stroke-light-heading fill-light-heading md:hidden'
                 : 'stroke-dark-heading md:hidden'
             }
             width="25"
