@@ -22,7 +22,7 @@ function Work({ position, company, location, type, duration }: IWork) {
         </div>
       </div>
       <div className="flex justify-between pt-2">
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col gap-2 md:flex-row sm:gap-2">
           <div className="flex items-center pr-5 gap-1">
             <HiOutlineBuildingOffice2 className="dark:text-whit" size={18} />
             <p className="text-content text-xs md:text-sm pl-1">{company}</p>
