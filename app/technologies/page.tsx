@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import { techStackDetails } from '@/Details';
-import { HashLoader } from 'react-spinners';
 export default function technologies() {
   const {
     html,
