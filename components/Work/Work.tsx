@@ -1,7 +1,7 @@
 import React from 'react';
-import Location from '@/public/assets/svgs/location.svg';
-import Company from '@/public/assets/svgs/company.svg';
-import Image from 'next/image';
+import { HiOutlineBuildingOffice2 } from 'react-icons/hi2';
+import { IoLocationOutline } from 'react-icons/io5';
+
 interface IWork {
   position: string;
   company: string;
@@ -24,17 +24,12 @@ function Work({ position, company, location, type, duration }: IWork) {
       <div className="flex justify-between pt-2">
         <div className="flex flex-col md:flex-row">
           <div className="flex items-center pr-5 gap-1">
-            <Image src={Company} title="Company" alt="" />
+            <HiOutlineBuildingOffice2 className="dark:text-whit" size={18} />
             <p className="text-content text-xs md:text-sm pl-1">{company}</p>
           </div>
           <div className="flex items-center">
             <p className="text-content text-xs flex gap-1 md:text-sm pl-1">
-              <Image
-                src={Location}
-                title="Loction"
-                alt=""
-                className="dark:fill-white"
-              />
+              <IoLocationOutline className="dark:text-whit" size={18} />
               {location}
             </p>
           </div>
