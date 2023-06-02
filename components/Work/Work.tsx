@@ -17,7 +17,7 @@ function Work({ position, company, location, type, duration }: IWork) {
         <h1 className="text-content font-normal  md:text-lg lg:text-xl">
           {position}
         </h1>
-        <div className="btn bg-gray-200 text-black-text dark:text-dark-heading text-xs font-semibold inline-block rounded-3xl px-3 py-1 min-w-fit">
+        <div className="btn dark:bg-white dark:text-black text-xs font-semibold inline-block rounded-3xl px-3 py-1 min-w-fit">
           {type}
         </div>
       </div>

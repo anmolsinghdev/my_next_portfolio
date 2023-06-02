@@ -53,25 +53,6 @@ export default function Navbar({ onThemeToggle }: INavbar) {
                 : 'text-black md:hidden'
             }
           />
-          {/* <svg
-            className={
-              theme.palette.mode === 'dark'
-                ? 'dark:stroke-light-heading fill-light-heading md:hidden'
-                : 'stroke-dark-heading md:hidden'
-            }
-            width="25"
-            height="20"
-            viewBox="0 0 16 13"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1.4375 1.3125H14.5625M1.4375 11.3125H14.5625H1.4375ZM1.4375 6.3125H14.5625H1.4375Z"
-              strokeWidth="1.875"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg> */}
         </div>
       </div>
       <nav
