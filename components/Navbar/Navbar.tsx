@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 import { socialMediaUrl } from '@/Details';
-
+import { GiHamburgerMenu } from 'react-icons/gi';
 interface INavbar {
   onThemeToggle: any;
 }
@@ -46,7 +46,14 @@ export default function Navbar({ onThemeToggle }: INavbar) {
         </span>
         <div> </div>
         <div onClick={toggleClass} className="cursor-pointer">
-          <svg
+          <GiHamburgerMenu
+            className={
+              theme.palette.mode === 'dark'
+                ? 'dark:text-white md:hidden'
+                : 'text-black md:hidden'
+            }
+          />
+          {/* <svg
             className={
               theme.palette.mode === 'dark'
                 ? 'dark:stroke-light-heading fill-light-heading md:hidden'
@@ -64,7 +71,7 @@ export default function Navbar({ onThemeToggle }: INavbar) {
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-          </svg>
+          </svg> */}
         </div>
       </div>
       <nav
