@@ -21,7 +21,7 @@ export default function Navbar({ onThemeToggle }: INavbar) {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="container mx-auto md:flex justify-between py-2 max-width">
+    <header className="container mx-auto md:flex py-2 max-width">
       <div className="flex justify-between items-center py-2 md:py-10">
         <span className="absolute left-0">
           <Box
@@ -58,7 +58,7 @@ export default function Navbar({ onThemeToggle }: INavbar) {
       <nav
         className={` ${
           !isOpen ? 'hidden' : null
-        } text-center md:flex justify-between`}
+        } text-center md:flex min-w-full justify-between`}
       >
         <ul className="custom-ul font-medium md:flex items-center md:space-x-5 md:mr-10">
           <li className="pb-1 md:pb-0">

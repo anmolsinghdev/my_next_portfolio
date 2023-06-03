@@ -27,6 +27,6 @@
     "sass": "^1.62.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4",
-    "typewriter-effect": "^2.19.0"
+    "typewriter-effect": "^2.20.1"
   }
 }
