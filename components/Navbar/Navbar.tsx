@@ -49,8 +49,8 @@ export default function Navbar({ onThemeToggle }: INavbar) {
           <GiHamburgerMenu
             className={
               theme.palette.mode === 'dark'
-                ? 'dark:text-white md:hidden'
-                : 'text-black md:hidden'
+                ? 'dark:text-white md:hidden text-2xl'
+                : 'text-black md:hidden text-2xl'
             }
           />
         </div>
