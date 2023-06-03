@@ -55,7 +55,7 @@ export const workDetails: IworkDetailsType[] = [
 
 export const socialMediaUrl: IsocialMediaUrlTypes = {
   linkdin: 'https://www.linkedin.com/in/anmol-singh-a29218183/',
-  github: 'https://github.com/webohboy',
+  github: 'https://github.com/anmolsinghdev',
   twitter: 'https://twitter.com/_anmol_chauhan',
   instagram: 'https://www.instagram.com/anmolchauhan._/',
 };
