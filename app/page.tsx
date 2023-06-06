@@ -5,7 +5,7 @@ import { Type } from '@/components/TypeWriter/Typewriter';
 export default function Home() {
   return (
     <>
-      <main className="container mx-auto max-width section md:flex">
+      <main className="container mx-auto max-width section md:flex lg:justify-between">
         <div>
           <h1 className="text-2xl md:text-4xl xl:text-5xl xl:leading-tight font-bold">
             Hi,👋<br></br>My Name is<br></br>
