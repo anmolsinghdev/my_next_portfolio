@@ -35,7 +35,7 @@ function Work({ position, company, location, type, duration }: IWork) {
           </div>
         </div>
         <p className="text-content text-xs md:text-sm pl-1 min-w-fit">
-          {duration}
+          {/* {duration} */}
         </p>
       </div>
     </article>
