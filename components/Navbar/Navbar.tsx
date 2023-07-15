@@ -80,7 +80,7 @@ export default function Navbar({ onThemeToggle }: INavbar) {
               Technologies
             </Link>
           </li>
-          <li className="pb-1 md:pb-0">
+          {/* <li className="pb-1 md:pb-0">
             <Link
               href="/projects"
               onClick={toggleClass}
@@ -88,7 +88,7 @@ export default function Navbar({ onThemeToggle }: INavbar) {
             >
               Projects
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/contact" onClick={toggleClass} className={'nav-items'}>
               Contact
