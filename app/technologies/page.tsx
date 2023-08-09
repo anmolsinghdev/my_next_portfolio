@@ -4,7 +4,7 @@ import Image from "next/image";
 import { techStackDetails } from "@/Details";
 import { useContext } from "react";
 import { ThemeContext } from "../layout";
-export default function technologies() {
+export default function Technologies() {
   const {
     html,
     css,
