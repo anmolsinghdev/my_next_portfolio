@@ -1,4 +1,3 @@
-
 import { Type } from '@/components/TypeWriter/Typewriter';
 
 export default function Home() {

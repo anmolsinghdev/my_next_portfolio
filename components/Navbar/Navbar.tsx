@@ -1,22 +1,25 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import React, { useState } from 'react';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
-import IconButton from '@mui/material/IconButton';
-import Box from '@mui/material/Box';
-import { useTheme } from '@mui/material/styles';
-import { socialMediaUrl } from '@/Details';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import Link from "next/link";
+import React, { useState } from "react";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import IconButton from "@mui/material/IconButton";
+import Box from "@mui/material/Box";
+import { useTheme } from "@mui/material/styles";
+import { socialMediaUrl } from "@/Details";
+import { GiHamburgerMenu } from "react-icons/gi";
 interface INavbar {
-  onThemeToggle: any;
+  onThemeToggle(): void;
 }
 
-export default function Navbar({ onThemeToggle }: INavbar) {
+export default function Navbar({
+  onThemeToggle,
+}: INavbar) {
   const theme = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-  const { twitter, linkdin, instagram, github } = socialMediaUrl;
+  const { twitter, linkdin, instagram, github } =
+    socialMediaUrl;
   const toggleClass = () => {
     setIsOpen(!isOpen);
   };
@@ -26,17 +29,23 @@ export default function Navbar({ onThemeToggle }: INavbar) {
         <span className="absolute left-0">
           <Box
             sx={{
-              display: 'flex',
-              width: '100%',
-              alignItems: 'center',
-              justifyContent: 'center',
-              bgcolor: 'background.default',
-              color: 'text.primary',
+              display: "flex",
+              width: "100%",
+              alignItems: "center",
+              justifyContent: "center",
+              bgcolor: "background.default",
+              color: "text.primary",
               borderRadius: 1,
             }}
           >
-            <IconButton sx={{ ml: 1 }} onClick={onThemeToggle} color="inherit">
-              {theme.palette.mode === 'dark' ? (
+            <IconButton
+              sx={{
+                ml: 1,
+              }}
+              onClick={onThemeToggle}
+              color="inherit"
+            >
+              {theme.palette.mode === "dark" ? (
                 <Brightness7Icon />
               ) : (
                 <Brightness4Icon />
@@ -45,29 +54,40 @@ export default function Navbar({ onThemeToggle }: INavbar) {
           </Box>
         </span>
         <div> </div>
-        <div onClick={toggleClass} className="cursor-pointer">
+        <div
+          onClick={toggleClass}
+          className="cursor-pointer"
+        >
           <GiHamburgerMenu
             className={
-              theme.palette.mode === 'dark'
-                ? 'dark:text-white md:hidden text-2xl'
-                : 'text-black md:hidden text-2xl'
+              theme.palette.mode === "dark"
+                ? "dark:text-white md:hidden text-2xl"
+                : "text-black md:hidden text-2xl"
             }
           />
         </div>
       </div>
       <nav
         className={` ${
-          !isOpen ? 'hidden' : null
+          !isOpen ? "hidden" : null
         } text-center md:flex min-w-full justify-between`}
       >
         <ul className="custom-ul font-medium md:flex items-center md:space-x-5 md:mr-10">
           <li className="pb-1 md:pb-0">
-            <Link href="/" onClick={toggleClass} className={'nav-items'}>
+            <Link
+              href="/"
+              onClick={toggleClass}
+              className={"nav-items"}
+            >
               Home
             </Link>
           </li>
           <li className="pb-1 md:pb-0">
-            <Link href="/about" onClick={toggleClass} className={'nav-items'}>
+            <Link
+              href="/about"
+              onClick={toggleClass}
+              className={"nav-items"}
+            >
               About
             </Link>
           </li>
@@ -75,7 +95,7 @@ export default function Navbar({ onThemeToggle }: INavbar) {
             <Link
               href="/technologies"
               onClick={toggleClass}
-              className={'nav-items'}
+              className={"nav-items"}
             >
               Technologies
             </Link>
@@ -90,17 +110,27 @@ export default function Navbar({ onThemeToggle }: INavbar) {
             </Link>
           </li> */}
           <li>
-            <Link href="/contact" onClick={toggleClass} className={'nav-items'}>
+            <Link
+              href="/contact"
+              onClick={toggleClass}
+              className={"nav-items"}
+            >
               Contact
             </Link>
           </li>
         </ul>
         <ul className="flex justify-evenly items-center my-5 md:my-0 md:space-x-5 md:mr-5">
           <li>
-            <Link href={twitter} target="_blank" rel="noreferrer noopener">
+            <Link
+              href={twitter}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <svg
                 className={
-                  theme.palette.mode === 'dark' ? 'fill-white' : 'fill-black'
+                  theme.palette.mode === "dark"
+                    ? "fill-white"
+                    : "fill-black"
                 }
                 width="32"
                 height="32"
@@ -113,10 +143,16 @@ export default function Navbar({ onThemeToggle }: INavbar) {
             </Link>
           </li>
           <li>
-            <Link href={linkdin} target="_blank" rel="noreferrer noopener">
+            <Link
+              href={linkdin}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <svg
                 className={
-                  theme.palette.mode === 'dark' ? 'fill-white' : 'fill-black'
+                  theme.palette.mode === "dark"
+                    ? "fill-white"
+                    : "fill-black"
                 }
                 width="30"
                 height="30"
@@ -129,10 +165,16 @@ export default function Navbar({ onThemeToggle }: INavbar) {
             </Link>
           </li>
           <li>
-            <Link href={github} target="_blank" rel="noreferrer noopener">
+            <Link
+              href={github}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <svg
                 className={
-                  theme.palette.mode === 'dark' ? 'fill-white' : 'fill-black'
+                  theme.palette.mode === "dark"
+                    ? "fill-white"
+                    : "fill-black"
                 }
                 width="30"
                 height="30"
@@ -149,12 +191,16 @@ export default function Navbar({ onThemeToggle }: INavbar) {
             </Link>
           </li>
           <li>
-            <a href={instagram} target="_blank" rel="noreferrer noopener">
+            <a
+              href={instagram}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <svg
                 className={
-                  theme.palette.mode === 'dark'
-                    ? 'fill-white mt-6'
-                    : 'fill-black mt-6'
+                  theme.palette.mode === "dark"
+                    ? "fill-white mt-6"
+                    : "fill-black mt-6"
                 }
                 width="50"
                 height="50"

@@ -1,17 +1,21 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 import Navbar from '@/components/Navbar/Navbar';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
+import createTheme from '@mui/material/styles/createTheme';
 import CssBaseline from '@mui/material/CssBaseline';
-import './globals.scss';
 import Footer from '@/components/Footer/Footer';
 import { Montserrat } from 'next/font/google';
-import { createContext } from 'react';
+import './globals.scss';
+
 interface IthemeContext {
   toggleTheme: boolean;
 }
-export const ThemeContext = createContext<IthemeContext>({ toggleTheme: false })
+export const ThemeContext =
+  createContext<IthemeContext>({
+    toggleTheme: false,
+  });
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-mont',
@@ -21,7 +25,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [toggleTheme, setToggleTheme] = useState(false);
+  const [toggleTheme, setToggleTheme] =
+    useState(false);
   function onThemeToggle() {
     setToggleTheme((prev) => !prev);
   }
@@ -40,11 +45,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning>
-        <main className={`${montserrat.variable} font-mont`}>
-          <ThemeContext.Provider value={{ toggleTheme }}>
-            <ThemeProvider theme={toggleTheme === false ? lightTheme : darkTheme}>
+        <main
+          className={`${montserrat.variable} font-mont`}
+        >
+          <ThemeContext.Provider
+            value={{ toggleTheme }}
+          >
+            <ThemeProvider
+              theme={
+                toggleTheme === false
+                  ? lightTheme
+                  : darkTheme
+              }
+            >
               <CssBaseline />
-              <Navbar onThemeToggle={onThemeToggle} />
+              <Navbar
+                onThemeToggle={onThemeToggle}
+              />
               {children}
               <Footer />
             </ThemeProvider>
