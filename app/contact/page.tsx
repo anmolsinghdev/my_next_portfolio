@@ -1,4 +1,3 @@
-'use client';
 import { ContactDetails } from '@/Details';
 export default function contact() {
   const { email } = ContactDetails;

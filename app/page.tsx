@@ -1,4 +1,3 @@
-'use client';
 
 import { Type } from '@/components/TypeWriter/Typewriter';
 

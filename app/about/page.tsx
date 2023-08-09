@@ -1,4 +1,3 @@
-'use client';
 import { eduDetails, workDetails } from '@/Details';
 import Work from '@/components/Work/Work';
 import React from 'react';
